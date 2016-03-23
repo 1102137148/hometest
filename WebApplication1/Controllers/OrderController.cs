@@ -52,7 +52,6 @@ namespace WebApplication1.Controllers
             //var result = new Models.Order();
             //result.CustId = "GSS";
             //result.CustName = "叡揚資訊";
-
             var result=new Models.Order() {CustId = "GSS",CustName = "叡揚資訊"};
             return this.Json(result,JsonRequestBehavior.AllowGet);
         }
