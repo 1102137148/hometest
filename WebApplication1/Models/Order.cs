@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace WebApplication1.Models
 {
@@ -10,11 +12,16 @@ namespace WebApplication1.Models
         /// <summary>
         /// 訂單編號
         /// </summary>
+
+        [DisplayName("訂單編號")]
+        [Required()]
         public int OrderId { get; set; }
 
         /// <summary>
         /// 客戶代號
         /// </summary>
+        [MaxLength(3)]
+        [DisplayName("客戶代號")]
         public string CustId { get; set; }
 
         /// <summary>
