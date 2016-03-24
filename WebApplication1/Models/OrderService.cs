@@ -51,7 +51,10 @@ namespace WebApplication1.Models
         /// <returns></returns>
         public List<Models.Order> GetOrders()
         {
-            return new List<Order>();
+            List<Models.Order> result = new List<Order>();
+            result.Add(new Order() { CustId = "Gss", CustName = "叡揚資訊", EmpId = 1, EmpName = "王曉明", Orderdate = DateTime.Parse("2015/08/15") });
+            result.Add(new Order() { CustId = "Abb", CustName = "呆呆資訊", EmpId = 2, EmpName = "王阿呆", Orderdate = DateTime.Parse("2015/10/25") });
+            return result;
         }
     }
 }
