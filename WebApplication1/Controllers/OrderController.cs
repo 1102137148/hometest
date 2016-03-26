@@ -17,6 +17,20 @@ namespace WebApplication1.Controllers
             Models.OrderService orderservice = new Models.OrderService();
             ViewBag.Data = orderservice.GetOrders();
             
+            List<SelectListItem> custData = new List<SelectListItem>();
+            custData.Add(new SelectListItem()
+            {
+                Text = "叡揚資訊",
+                Value = "1"
+            });
+
+            custData.Add(new SelectListItem()
+            {
+                Text = "網軟資訊",
+                Value = "2"
+            });
+
+            ViewBag.custData = custData;
             return View();
         }
         /// <summary>
